@@ -6,6 +6,7 @@ function pg_connection_string_from_database_url() {
 //  return "user=$user password=$pass host=$host dbname=" . substr($path, 1); # <- you may want to add sslmode=require there too
   return "user=ozothppcrrbtpt password=QxLJ0IoqGCpetHKE4yJXm1rQXy host=ec2-54-228-219-2.eu-west-1.compute.amazonaws.com dbname=d54a0dd3p463b"; # <- you may want to add sslmode=require there too
 }
+echo 'sdsd';
 # Here we establish the connection. Yes, that's all.
 $pg_conn = PDO(pg_connection_string_from_database_url());
 # Now let's use the connection for something silly just to prove it works:
@@ -21,6 +22,6 @@ if (!pg_num_rows($result)) {
     echo $row[0]."\n"; 
   }
 }
-echo 'sdsd';
+
 print "\n";
 ?>
