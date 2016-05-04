@@ -8,7 +8,8 @@ function pg_connection_string_from_database_url() {
 }
 
 # Here we establish the connection. Yes, that's all.
-$pg_conn = PDO(pg_connection_string_from_database_url());
+$pg_conn = new PDO(pg_connection_string_from_database_url());
+//$pg_conn = new PDO('pgsql:user=exampleuser dbname=exampledb password=examplepass');
 # Now let's use the connection for something silly just to prove it works:
 echo 'tyt';
 $sql = "SELECT name FROM projects";
