@@ -21,5 +21,6 @@ if (!pg_num_rows($result)) {
     echo $row[0]."\n"; 
   }
 }
-print "sdsdsds\n";
+echo 'sdsd';
+print "\n";
 ?>
