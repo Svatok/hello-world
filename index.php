@@ -6,7 +6,7 @@ $sql = "SELECT name FROM projects";
 
 $query=$pg_conn->query($sql);
 
-echo count($query);
+print_r($query);
 print "<pre>\n";
 $result = $query->fetchAll();
 
