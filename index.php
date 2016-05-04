@@ -15,10 +15,10 @@ echo 'tyt';
 $sql = "SELECT name FROM projects";
 $query=$conn->query($sql);
 print "<pre>\n";
-if (!pg_num_rows($result)) {
+$result = $query->fetchAll();
+if (count($result)==0) {
   print("Your connection is working, but your database is empty.\nFret not. This is expected for new apps.\n");
 } else {
-  $result = $query->fetchAll();
   foreach ($result as $row) {
     echo $row[0]."\n"; 
   }
