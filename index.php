@@ -14,7 +14,7 @@ $pg_conn = new PDO('pgsql:user=ozothppcrrbtpt dbname=d54a0dd3p463b password=QxLJ
 # Now let's use the connection for something silly just to prove it works:
 //echo 'tyt';
 $sql = "SELECT name FROM projects";
-$query=$conn->query($sql);
+$query=$pg_conn->query($sql);
 print "<pre>\n";
 $result = $query->fetchAll();
 echo $sql;
